@@ -12,7 +12,7 @@ $nim=$_SESSION['nim'];
   </ul>
 </div>
 
-<div class="container">
+<div class="container table-responsive">
   <h4 class='text-center'>Daftar Permohonan Surat Keterangan</h4>           
   <table class="table table-bordered table-hover">
     <thead>

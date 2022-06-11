@@ -1,7 +1,7 @@
 <?php
     include 'menu.php';
     include '../link.php';
-    include '../assets/fungsi.php';
+    // include '../assets/fungsi.php';
 ?>
 <div>
 <ul class="breadcrumb">
@@ -84,6 +84,7 @@
                 <div class="form-group">
                     <label for="ttl" class="form-control-label">Tempat, Tanggal Lahir:</label>
                     <?php 
+                        // $tglhr=$_SESSION['tglahir'];
                         $tglhr=tanggal_indo($_SESSION['tglahir']);
                      ?>
                     <input type="text" class="form-control" id="ttl" value="<?php echo $_SESSION['tmplahir'].', '.$tglhr?>" name="ttl" disabled>

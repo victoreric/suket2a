@@ -1,6 +1,5 @@
 <?php  include 'menuA.php'; 
 include '../link.php';
-include '../assets/fungsi.php';
 $id=$_GET['id'];
 ?>
 

@@ -11,7 +11,7 @@ include '../link.php'?>
 <div class="container-fluid">
 <div class="card">
   <div class="card-header text-center">Daftar Permintaan Surat Keterangan</div>
-  <div class="card-body">        
+  <div class="card-body table-responsive">        
   <table id="example1" class="table table-bordered table-hover">
     <thead class="bg-dark text-white">
       <tr>
