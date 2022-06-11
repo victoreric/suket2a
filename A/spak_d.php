@@ -131,8 +131,8 @@ $id=$_GET['id'];
             </label>
         </div>
         <div class="form-check-inline">
-            <button type="submit" name='simpan' class="btn btn-success ml-5 mr-5">Simpan</button>  
-            <a href="spak.php" class="btn btn-danger">Batal</a> 
+            <button type="submit" name='simpan' class="btn btn-success ml-5 mr-5 mt-3">Simpan</button>  
+            <a href="spak.php" class="btn btn-danger mt-3">Batal</a> 
         </div>
     </div> 
         <?php } 
@@ -140,18 +140,18 @@ $id=$_GET['id'];
             ?>        
                 <div class='p-2 bg-warning'> Surat keterangan telah diberi nomor, ditandatangani dan diberi cap fakultas. 
                 </div>                
-                <div class="panel-footer mt-5 text-center">
+                <div class="panel-footer mt-2 text-center">
                     <?php if($hasil['id_jenis']=='1'){ 
-                        echo "<a href='c.php?id=$id' class='btn btn-success mr-5' name='' target='blank'>Cetak Surat Keterangan</a> ";
+                        echo "<a href='c.php?id=$id' class='btn btn-success mr-3' name='' target='blank'>Cetak Surat Keterangan</a> ";
                     }  
                     elseif($hasil['id_jenis']=='2'){
-                        echo "<a href='c2.php?id=$id' class='btn btn-success mr-5' name='' target='blank'>Cetak Surat Keterangan</a> ";
+                        echo "<a href='c2.php?id=$id' class='btn btn-success mr-3' name='' target='blank'>Cetak Surat Keterangan</a> ";
                     }
                     else{
-                        echo "<a href='c3.php?id=$id' class='btn btn-success mr-5' name='' target='blank'>Cetak Surat Keterangan</a> ";
+                        echo "<a href='c3.php?id=$id' class='btn btn-success mr-3' name='' target='blank'>Cetak Surat Keterangan</a> ";
                     }
                     ?>
-                    <a href="spak.php" class="btn btn-danger">Kembali</a>
+                    <a href="spak.php" class="mt-1 btn btn-danger">Kembali</a>
                 </div>
             <?php }}?> 
     </form>

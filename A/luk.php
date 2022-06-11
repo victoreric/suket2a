@@ -21,8 +21,12 @@ $file=$_GET['f'];
 ?>
 
 <div class="container-fluid">   
-    <div class="embed-responsive embed-responsive-16by9">
-        <iframe src="../assets/bekas_ak/<?php echo $file;?>" alt=""></iframe>
+    <div class="embed-responsive embed-responsive-1by1">
+
+    <!-- <div class="embed-responsive embed-responsive-21by9">
+  <iframe class="embed-responsive-item" src="..."></iframe>
+</div> -->
+        <iframe class="embed-responsive-item" src="../assets/bekas_ak/<?php echo $file;?>" alt=""></iframe>
     </div>  
 </div>
 </body>

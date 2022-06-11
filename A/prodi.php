@@ -15,7 +15,9 @@ function view($conn){ ?>
     <div class="card">    
     <div class="card-header text-center">Program Studi</div>
         <div class="card-body">
-        <a href="prodi.php?aksi=add" class="btn btn-outline-primary" role="button">Tambah</a>
+        <a href="prodi.php?aksi=add" class="btn btn-success mb-2 fa fa-plus-circle" role="button"> </a>
+        
+        
         <table class="table table-bordered table-hover">
             <thead class="bg-dark text-white">
                 <tr>
@@ -33,9 +35,9 @@ function view($conn){ ?>
                 <tr>
                     <td><?php echo $hasil['id_prodi']; ?></td>
                     <td><?php echo $hasil['prodi']; ?></td>
-                    <td><a href='prodi.php?aksi=update&id=<?php echo $hasil['id_prodi']; ?>'>edit </a>| 
+                    <td><a href='prodi.php?aksi=update&id=<?php echo $hasil['id_prodi']; ?>' class='btn-sm btn-warning fas fa-edit'> </a>
                         
-                    <a href="prodi.php?aksi=delete&id=<?php echo $hasil['id_prodi'];?>" onclick="javascript:return confirm('Anda Yakin untuk menghapus data ini?')">hapus</a>
+                    <a href="prodi.php?aksi=delete&id=<?php echo $hasil['id_prodi'];?>" onclick="javascript:return confirm('Anda Yakin untuk menghapus data ini?')" class="btn-sm btn-danger fas fa-trash-alt mt-1"> </a>
                         
                     </td>
                 </tr>
