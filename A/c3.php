@@ -147,5 +147,6 @@ $pdf->SetFont('Times','B','12');
 $pdf->Cell(50,4,' J. M. Tupan, ST., MT. ');
 $pdf->Ln();
 $pdf->Cell(50,4,'NIP: 197807272002121001');
+$pdf->Image('../assets/img/blu.png',180,260,15);
 $pdf->Output();
 

@@ -32,6 +32,18 @@ if($level=='1'){
         <script src="https://code.highcharts.com/highcharts.js"></script>
         <script src="../vendor/jquery/jquery.min.js"></script>
 
+        <!-- scriptJamDigital -->
+        <script type="text/javascript">
+            // 1 detik = 1000
+            window.setTimeout("waktu()",1000);
+            function waktu() {
+            var tanggal = new Date();
+            setTimeout("waktu()",1000);
+            document.getElementById("tanggalku").innerHTML
+            = tanggal.getHours()+":"+tanggal.getMinutes()+":"+tanggal.getSeconds();
+            }
+        </script>
+
         <!-- forDataTable -->
         <link href="../vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
 
@@ -44,7 +56,7 @@ if($level=='1'){
         </style>
     
     </head>
-    <body id="page-top">
+    <body id="page-top" onload="waktu()">
 
         <!-- Page Wrapper -->
         <div id="wrapper">
@@ -154,10 +166,14 @@ if($level=='1'){
                             echo hari_ini($hari).',';
                             echo '<br>';
                             $tgl=date('Y-m-d');
-                            echo tanggal_indo($tgl).'.';
+                            echo tanggal_indo($tgl);
                             echo '<br>';
-                            echo date('H:i:s a');
-                            ?>
+                        ?>
+                            <table align=center style="border:1px solid black" bgcolor="blue" cellpadding="7">
+                                <tr>
+                                    <td><div id="tanggalku"></div> </td>
+                                </tr>
+                            </table>
                         </span>
                     </span>
                 </li>
