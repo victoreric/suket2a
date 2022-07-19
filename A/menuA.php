@@ -88,9 +88,9 @@ if($level=='1'){
                     <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Statistik berdasarkan:</h6>
-                            <a class="collapse-item" href="index.php">Surat Aktif Kuliah</a>
-                            <a class="collapse-item" href="index.php">Surat KTM Sementara</a>
-                            <a class="collapse-item" href="index.php">Surat Rekomendasi</a>
+                            <a class="collapse-item" href="sta_ak.php">Surat Aktif Kuliah</a>
+                            <a class="collapse-item" href="sta_ktm.php">Surat KTM Sementara</a>
+                            <a class="collapse-item" href="sta_rb.php">Surat Rekomendasi</a>
                         </div>
                     </div>
                 </li>
@@ -138,6 +138,7 @@ if($level=='1'){
                             <a class="collapse-item" href="jenis.php">Surat Permohonan</a>
                             <a class="collapse-item" href="pejabat.php">Pejabat</a>
                             <a class="collapse-item" href="prodi.php">Program Studi</a>
+                            <a class="collapse-item" href="mu.php">Manajemen User</a>
                         </div>
                     </div>
                 </li>

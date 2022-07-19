@@ -1,4 +1,5 @@
 <?php
+// rekomendasi beasiswa
     include 'menu.php';
     include '../link.php';
     // include '../assets/fungsi.php';
@@ -35,7 +36,7 @@
                             $queri="SELECT * FROM prodi WHERE id_prodi=$var";
                             $sql=mysqli_query($conn,$queri);
                             $res=mysqli_fetch_array($sql);
-                            echo " <option value='".$res['id_prodi'].  "' selected>".$res['prodi']. "</option>     ";
+                            echo " <option value='".$res['id_prodi'].  "' selected>".$res['prodi']. "</option>";
                         ?>     
                     </select>
                 </div>

@@ -1,4 +1,5 @@
 <?php
+// cek status
 include 'menu.php'; 
 include '../link.php';
 $nim=$_SESSION['nim'];

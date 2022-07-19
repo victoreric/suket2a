@@ -46,7 +46,7 @@ function view($conn){ ?>
     </div>
     </div>
 <?php } ?>
-<!-- end fungsi tampil data -->
+<!-- end fungsi view data -->
 
 <!-- tambahdata -->
 <?php 

@@ -1,4 +1,5 @@
 <?php
+// surat akti kuliah
     include 'menu.php';
     include '../link.php';
 ?>
