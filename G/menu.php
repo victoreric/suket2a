@@ -33,6 +33,18 @@ if($level=='2'){
         <script src="https://code.highcharts.com/highcharts.js"></script>
         <script src="../vendor/jquery/jquery.min.js"></script>
 
+        <!-- scriptJamDigital -->
+        <script type="text/javascript">
+            // 1 detik = 1000
+            window.setTimeout("waktu()",1000);
+            function waktu() {
+            var tanggal = new Date();
+            setTimeout("waktu()",1000);
+            document.getElementById("tanggalku").innerHTML
+            = tanggal.getHours()+":"+tanggal.getMinutes()+":"+tanggal.getSeconds();
+            }
+        </script>
+
         <!-- plugin for search in combobox -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet" />
         <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
@@ -46,7 +58,7 @@ if($level=='2'){
 
     </head>
 
-    <body id="page-top">
+    <body id="page-top" onload="waktu()">
 
         <!-- Page Wrapper -->
         <div id="wrapper">
@@ -128,10 +140,14 @@ if($level=='2'){
                             echo hari_ini($hari).',';
                             echo '<br>';
                             $tgl=date('Y-m-d');
-                            echo tanggal_indo($tgl).'.';
-                            echo '<br>';
-                            echo date('H:i:s a');
-                            ?>
+                            echo tanggal_indo($tgl);
+                            echo '<br> <br>';
+                        ?>
+                        <table align=center style="border:1px solid black" bgcolor="blue" cellpadding="7">
+                                <tr>
+                                    <td><div id="tanggalku"></div> </td>
+                                </tr>
+                        </table>
                         </span>
                     </span>
                 </li>

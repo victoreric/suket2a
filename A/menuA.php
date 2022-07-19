@@ -167,7 +167,7 @@ if($level=='1'){
                             echo '<br>';
                             $tgl=date('Y-m-d');
                             echo tanggal_indo($tgl);
-                            echo '<br>';
+                            echo '<br> <br>';
                         ?>
                             <table align=center style="border:1px solid black" bgcolor="blue" cellpadding="7">
                                 <tr>
