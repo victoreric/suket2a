@@ -6,16 +6,16 @@ include '../link.php';
 function view($conn){ ?>
     <div>
         <ul class='breadcrumb'>
-        <li class='breadcrumb-item'><a href='index.php'><i class='fas fa-home'></i></a></li>
+        <li class='breadcrumb-item'><a href='index'><i class='fas fa-home'></i></a></li>
         <li class='breadcrumb-item'><a href='#'>Master Data</a></li>
-        <li class='breadcrumb-item'><a href='prodi.php'>Progam studi</a></li>
+        <li class='breadcrumb-item'><a href='prodi'>Progam studi</a></li>
         </ul>
         </div>
     <div class='container'>
     <div class="card">    
     <div class="card-header text-center">Program Studi</div>
         <div class="card-body">
-        <a href="prodi.php?aksi=add" class="btn btn-success mb-2 fa fa-plus-circle" role="button"> </a>
+        <a href="prodi?aksi=add" class="btn btn-success mb-2 fa fa-plus-circle" role="button"> </a>
         
         
         <table class="table table-bordered table-hover">
@@ -35,9 +35,9 @@ function view($conn){ ?>
                 <tr>
                     <td><?php echo $hasil['id_prodi']; ?></td>
                     <td><?php echo $hasil['prodi']; ?></td>
-                    <td><a href='prodi.php?aksi=update&id=<?php echo $hasil['id_prodi']; ?>' class='btn-sm btn-warning fas fa-edit'> </a>
+                    <td><a href='prodi?aksi=update&id=<?php echo $hasil['id_prodi']; ?>' class='btn-sm btn-warning fas fa-edit'> </a>
                         
-                    <a href="prodi.php?aksi=delete&id=<?php echo $hasil['id_prodi'];?>" onclick="javascript:return confirm('Anda Yakin untuk menghapus data ini?')" class="btn-sm btn-danger fas fa-trash-alt mt-1"> </a>
+                    <a href="prodi?aksi=delete&id=<?php echo $hasil['id_prodi'];?>" onclick="javascript:return confirm('Anda Yakin untuk menghapus data ini?')" class="btn-sm btn-danger fas fa-trash-alt mt-1"> </a>
                         
                     </td>
                 </tr>
@@ -55,9 +55,9 @@ function view($conn){ ?>
 function add($conn){ ?>
     <div>
         <ul class='breadcrumb'>
-        <li class='breadcrumb-item'><a href='index.php'><i class='fas fa-home'></i></a></li>
-        <li class='breadcrumb-item'><a href='prodi.php'>Master Data</a></li>
-        <li class='breadcrumb-item'><a href='prodi.php?aksi=add'>Tambah Program Studi</a></li>
+        <li class='breadcrumb-item'><a href='index'><i class='fas fa-home'></i></a></li>
+        <li class='breadcrumb-item'><a href='prodi'>Master Data</a></li>
+        <li class='breadcrumb-item'><a href='prodi?aksi=add'>Tambah Program Studi</a></li>
         </ul>
     </div>
     <div class="container">
@@ -75,7 +75,7 @@ function add($conn){ ?>
                 </div>
                 <div class="panel-footer mt-5">
                     <button type="submit" name='simpan' class="btn btn-success  mr-5">Simpan</button>
-                    <a href="prodi.php" class="btn btn-danger">Batal</a>
+                    <a href="prodi" class="btn btn-danger">Batal</a>
                 </div>
                 </form>
             </div>
@@ -90,7 +90,7 @@ if(isset($_POST['simpan'])){
     $sql=mysqli_query($conn,$query);
 
     if($sql){
-        echo "<script> alert ('Berhasil menambahkan program studi '); window.location='prodi.php'; </script>" ;
+        echo "<script> alert ('Berhasil menambahkan program studi '); window.location='prodi'; </script>" ;
     }else{
         echo "<script>alert('Terjadi kegagalan. ID telah terdaftar') </script>";
     }
@@ -107,7 +107,7 @@ function delete($conn){
         $sql=mysqli_query($conn,$queri);
 
         if($sql){
-            echo "<script>alert('Berhasil menghapus data');window.location='prodi.php'; </script>";
+            echo "<script>alert('Berhasil menghapus data');window.location='prodi'; </script>";
         }
     }
 }
@@ -121,9 +121,9 @@ function update($conn){
 
     <div>
         <ul class='breadcrumb'>
-            <li class='breadcrumb-item'><a href='index.php'><i class='fas fa-home'></i></a></li>
-            <li class='breadcrumb-item'><a href='prodi.php'>Master Data</a></li>
-            <li class='breadcrumb-item'><a href='prodi.php?aksi=update&id=<?php echo $id; ?>'>Update Program Studi</a></li>
+            <li class='breadcrumb-item'><a href='index'><i class='fas fa-home'></i></a></li>
+            <li class='breadcrumb-item'><a href='prodi'>Master Data</a></li>
+            <li class='breadcrumb-item'><a href='prodi?aksi=update&id=<?php echo $id; ?>'>Update Program Studi</a></li>
         </ul>
     </div>
     <div class="container">
@@ -146,7 +146,7 @@ function update($conn){
                 </div>
                 <div class="panel-footer mt-5">
                     <button type="submit" name='update' class="btn btn-success  mr-5">Simpan</button>
-                    <a href="prodi.php" class="btn btn-danger">Batal</a>
+                    <a href="prodi" class="btn btn-danger">Batal</a>
                 </div>
                 </form>
             </div>
@@ -164,9 +164,9 @@ function update($conn){
         $sql=mysqli_query($conn,$queri);
 
         if($sql){
-            echo"<script>alert('berhasil update data');window.location='prodi.php';</script>";
+            echo"<script>alert('berhasil update data');window.location='prodi';</script>";
         }else{
-            echo"<script>alert('terjadi kegagalan. Id Surat terdaftar');window.location='prodi.php';</script>";
+            echo"<script>alert('terjadi kegagalan. Id Surat terdaftar');window.location='prodi';</script>";
         }
     }
     ?>

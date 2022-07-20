@@ -28,7 +28,7 @@
         header('location:G');
     }
     else {
-        echo "<script> alert ('User dan Pasword belum diaktifkan. Hubungi administrator'); window.location='index.php'; </script>" ;
+        echo "<script> alert ('User dan Pasword belum diaktifkan. Hubungi administrator'); window.location='index'; </script>" ;
         }
     }
     include "link.php"; 
@@ -75,7 +75,7 @@
                 <a class="small" data-toggle='modal' data-target='#myModal' href=''>Lupa Password?</a>
             </div>
             <div class="text-center">
-                Belum punya akun?<a class="small" href="reg.php"> Daftar disini!</a>
+                Belum punya akun?<a class="small" href="reg"> Daftar disini!</a>
             </div>
             <nav class="login-card-footer-nav mt-5">
                 <a href="">Terms of use |</a>
@@ -137,18 +137,18 @@
 		$_SESSION['active']=$hasil['active'];
 
 		if($_SESSION['level']=='1' && $_SESSION['active']=='Y'){
-            header('location:A/index.php');
+            header('location:A/index');
 		}
 		else if($_SESSION['level']=='2' && $_SESSION['active']=='Y'){
-		    header('location:G/index.php');
+		    header('location:G/index');
 		}
 		else {
 			session_destroy();
-			echo "<script> alert ('User dan Pasword belum diaktifkan..! Hubungi Sub Bagian Kemahasiswaan dan Alumni FATEK'); window.location='index.php'; </script>" ;
+			echo "<script> alert ('User dan Pasword belum diaktifkan..! Hubungi Sub Bagian Kemahasiswaan dan Alumni FATEK'); window.location='index'; </script>" ;
 		}
 	}
 	else{
- 		echo "<script> alert ('User dan Pasword tidak terdaftar. Hubungi Sub Bagian Kemahasiswaan dan Alumni FATEK.'); window.location='index.php'; </script>" ;
+ 		echo "<script> alert ('User dan Pasword tidak terdaftar. Hubungi Sub Bagian Kemahasiswaan dan Alumni FATEK.'); window.location='index'; </script>" ;
 	}
 }
 ?>

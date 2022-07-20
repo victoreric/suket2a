@@ -2,9 +2,9 @@
 include '../link.php'?>
 <div>
 <ul class="breadcrumb">
-    <li class="breadcrumb-item"><a href="index.php"><i class="fas fa-home"></i></a></li>
+    <li class="breadcrumb-item"><a href="index"><i class="fas fa-home"></i></a></li>
     <li class="breadcrumb-item"><a href="#">Statistik</a></li>
-    <li class="breadcrumb-item"><a href="sta_ktm.php">Surat KTM Sementara</a></li>
+    <li class="breadcrumb-item"><a href="sta_ktm">Surat KTM Sementara</a></li>
   </ul>
 </div>
 

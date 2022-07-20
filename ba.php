@@ -78,7 +78,7 @@
                             </form>
                             <hr>
                             <div class="text-center">
-                                <a class="small" href="index.php">Sudah Punya Akun? Login!</a>
+                                <a class="small" href="index">Sudah Punya Akun? Login!</a>
                             </div>
                         </div>
                     </div>
@@ -116,7 +116,7 @@ if (isset($_POST['simpan'])) {
 
 
     if($sql){
-        echo "<script> alert ('Berhasil menambahkan akun baru!'); window.location='index.php'; </script>" ;
+        echo "<script> alert ('Berhasil menambahkan akun baru!'); window.location='index'; </script>" ;
     }else {
         echo "terjadi kesalahan selama penyimpanan";
     }

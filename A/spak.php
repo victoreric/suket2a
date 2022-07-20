@@ -2,9 +2,9 @@
 include '../link.php'?>
 <div>
 <ul class="breadcrumb">
-    <li class="breadcrumb-item"><a href="index.php"><i class="fas fa-home"></i></a></li>
+    <li class="breadcrumb-item"><a href="index"><i class="fas fa-home"></i></a></li>
     <li class="breadcrumb-item"><a href="#">Lihat Data</a></li>
-    <li class="breadcrumb-item"><a href="spak.php">Surat Permohonan</a></li>
+    <li class="breadcrumb-item"><a href="spak">Surat Permohonan</a></li>
   </ul>
 </div>
 
@@ -48,7 +48,7 @@ include '../link.php'?>
         <td><?php echo $hasil['prodi']; ?></td>
         <td><?php echo $hasil['jenis']; ?></td>
         <td><?php echo $hasil['tujuan']; ?></td>
-        <td><a href="spak_d.php?id=<?php echo $hasil['id_surat'];?>">Lihat Surat </a> </td>
+        <td><a href="spak_d?id=<?php echo $hasil['id_surat'];?>">Lihat Surat </a> </td>
             <?php 
               $ttd=$hasil['ttd'];
               if($ttd!='ttd.png'){ ?>

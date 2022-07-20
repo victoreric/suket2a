@@ -4,7 +4,7 @@ include '../assets/indohari.php';
 
 session_start();
 if(!isset($_SESSION['nama'])){
-   echo "<script> alert('Anda Belum Login'); window.location='../index.php'; </script>";
+   echo "<script> alert('Anda Belum Login'); window.location='../index'; </script>";
 } 
 
 $level=$_SESSION['level'];
@@ -65,7 +65,7 @@ if($level=='1'){
             <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
 
                 <!-- Sidebar - Brand -->
-                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
+                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index">
                     <div class="sidebar-brand-icon">
                         <!-- <i class="fas fa-laugh-wink"></i> -->
                         <img src="../assets/img/unpattilogo.png" width="50px" alt="">
@@ -78,7 +78,7 @@ if($level=='1'){
 
                 <!-- Nav Item - Dashboard -->
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.php">
+                    <a class="nav-link" href="index">
                         <i class="fas fa-fw fa-tachometer-alt"></i>
                         <span>Dashboard</span></a>
                 </li>
@@ -100,9 +100,9 @@ if($level=='1'){
                     <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Statistik berdasarkan:</h6>
-                            <a class="collapse-item" href="sta_ak.php">Surat Aktif Kuliah</a>
-                            <a class="collapse-item" href="sta_ktm.php">Surat KTM Sementara</a>
-                            <a class="collapse-item" href="sta_rb.php">Surat Rekomendasi</a>
+                            <a class="collapse-item" href="sta_ak">Surat Aktif Kuliah</a>
+                            <a class="collapse-item" href="sta_ktm">Surat KTM Sementara</a>
+                            <a class="collapse-item" href="sta_rb">Surat Rekomendasi</a>
                         </div>
                     </div>
                 </li>
@@ -116,18 +116,10 @@ if($level=='1'){
                 </div>
                 <!-- Nav Item - statistik Collapse Menu -->
                 <li class="nav-item">
-                    <a class="nav-link collapsed" href="spak.php" aria-expanded="true" aria-controls="collapseTwo">
+                    <a class="nav-link collapsed" href="spak" aria-expanded="true" aria-controls="collapseTwo">
                         <i class="fas fa-edit fa-chart-area"></i>
                         <span>Lihat Surat Permohonan</span>
                     </a>
-                    <!-- <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar"> -->
-                        <!-- <div class="bg-white py-2 collapse-inner rounded"> -->
-                            <!-- <h6 class="collapse-header">Statistik berdasarkan:</h6> -->
-                            <!-- <a class="collapse-item" href="spak.php"> Aktif Kuliah</a>
-                            <a class="collapse-item" href="">KTM Sementara</a>
-                            <a class="collapse-item" href="">Rekomendasi Beasiswa</a>
-                        </div>
-                    </div> -->
                 </li>
 
                 <!-- Divider -->
@@ -147,10 +139,10 @@ if($level=='1'){
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <!-- <h6 class="collapse-header">Master data:</h6> -->
-                            <a class="collapse-item" href="jenis.php">Surat Permohonan</a>
-                            <a class="collapse-item" href="pejabat.php">Pejabat</a>
-                            <a class="collapse-item" href="prodi.php">Program Studi</a>
-                            <a class="collapse-item" href="mu.php">Manajemen User</a>
+                            <a class="collapse-item" href="jenis">Surat Permohonan</a>
+                            <a class="collapse-item" href="pejabat">Pejabat</a>
+                            <a class="collapse-item" href="prodi">Program Studi</a>
+                            <a class="collapse-item" href="mu">Manajemen User</a>
                         </div>
                     </div>
                 </li>
@@ -233,10 +225,7 @@ if($level=='1'){
                                 <!-- Dropdown - User Information -->
                                 <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                     aria-labelledby="userDropdown">
-                                    <!-- <a class="dropdown-item" href="#">
-                                        <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                        Profile
-                                    </a> -->
+                            
                                     <a class="dropdown-item" href="">
                                         <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                                         Ganti Password
@@ -259,7 +248,7 @@ if($level=='1'){
 
     <?php } 
     else {
-        echo "<script> alert('Anda Tidak punya akses ke Halaman ini.'); window.location='../index.php'; </script>";
+        echo "<script> alert('Anda Tidak punya akses ke Halaman ini.'); window.location='../index'; </script>";
         exit;
     }
     ?>

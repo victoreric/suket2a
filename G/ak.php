@@ -7,9 +7,9 @@
 <!-- Main content starts -->
 <div>
 <ul class="breadcrumb">
-    <li class="breadcrumb-item"><a href="index.php"><i class="fas fa-home"></i></a></li>
+    <li class="breadcrumb-item"><a href="index"><i class="fas fa-home"></i></a></li>
     <li class="breadcrumb-item"><a href="#">Surat Permohonan</a></li>
-    <li class="breadcrumb-item"><a href="ak.php">Aktif Kuliah</a></li>
+    <li class="breadcrumb-item"><a href="ak">Aktif Kuliah</a></li>
   </ul>
 </div>
 
@@ -172,7 +172,7 @@
             <hr>  
                 <div class="panel-footer mt-5 text-center">
                     <button type="submit" name='simpan' class="btn btn-success  mr-5">Simpan</button>
-                    <a href="cs.php" class="btn btn-danger">Batal</a>
+                    <a href="cs" class="btn btn-danger">Batal</a>
                  </div>
         </form>
     </div>
@@ -291,9 +291,9 @@ if(isset($_POST['simpan'])){
         $sql=mysqli_query($conn,$query);
 
         if($sql){
-            echo "<script> alert ('Surat Permohonan berhasil disimpan. Kami akan segera memproses Permohonan Anda '); window.location='cs.php'; </script>" ;
+            echo "<script> alert ('Surat Permohonan berhasil disimpan. Kami akan segera memproses Permohonan Anda '); window.location='cs'; </script>" ;
         }else{
-            echo "<script> alert ('Terjadi kesalahan penyimpanan data '); window.location='ak.php'; </script>" ;
+            echo "<script> alert ('Terjadi kesalahan penyimpanan data '); window.location='ak'; </script>" ;
         }
     }
 }

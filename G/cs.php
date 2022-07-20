@@ -7,9 +7,9 @@ $nim=$_SESSION['nim'];
 
 <div>
 <ul class="breadcrumb">
-    <li class="breadcrumb-item"><a href="index.php"><i class="fas fa-home"></i></a></li>
+    <li class="breadcrumb-item"><a href="index"><i class="fas fa-home"></i></a></li>
     <li class="breadcrumb-item"><a href="#">Status Permohonan</a></li>
-    <li class="breadcrumb-item"><a href="cs.php">Cek Status</a></li>
+    <li class="breadcrumb-item"><a href="cs">Cek Status</a></li>
   </ul>
 </div>
 
@@ -62,13 +62,13 @@ $nim=$_SESSION['nim'];
               <?php 
               $id=$hasil['id_surat'];
               if($hasil['id_jenis']=='1'){ 
-                        echo "<a href='../A/c.php?id=$id' class='btn btn-success' name='' target='blank'>Cetak Surat</a> ";
+                        echo "<a href='../A/c?id=$id' class='btn btn-success' name='' target='blank'>Cetak Surat</a> ";
                     }  
                     elseif($hasil['id_jenis']=='2'){
-                        echo "<a href='../A/c2.php?id=$id' class='btn btn-success' name='' target='blank'>Cetak Surat</a> ";
+                        echo "<a href='../A/c2?id=$id' class='btn btn-success' name='' target='blank'>Cetak Surat</a> ";
                     }
                     else{
-                        echo "<a href='../A/c3.php?id=$id' class='btn btn-success mr-5' name='' target='blank'>Cetak Surat</a> ";
+                        echo "<a href='../A/c3?id=$id' class='btn btn-success mr-5' name='' target='blank'>Cetak Surat</a> ";
                     }
                 ?>
               <!-- <a href="../A/c.php?id=<?php echo $hasil['id_surat'];?>" target="blank">Cetak Surat </a> -->

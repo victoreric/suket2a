@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['nim'])){
-   echo "<script> alert('Anda Belum Login'); window.location='../index.php'; </script>";
+   echo "<script> alert('Anda Belum Login'); window.location='../index'; </script>";
 } 
 ?>
  <!DOCTYPE html>

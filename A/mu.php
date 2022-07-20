@@ -24,9 +24,9 @@ if (isset($_GET['aksi'])){
 function view($conn){ ?>
 <div>
 <ul class="breadcrumb">
-    <li class="breadcrumb-item"><a href="index.php"><i class="fas fa-home"></i></a></li>
+    <li class="breadcrumb-item"><a href="index"><i class="fas fa-home"></i></a></li>
     <li class="breadcrumb-item"><a href="#">Master Data</a></li>
-    <li class="breadcrumb-item"><a href="mu.php">Manajemen Akun Pengguna</a></li>
+    <li class="breadcrumb-item"><a href="mu">Manajemen Akun Pengguna</a></li>
   </ul>
 </div>
 
@@ -61,9 +61,9 @@ function view($conn){ ?>
 				<td><?php echo $hasil['nama']; ?></td>
 				<td><?php echo $hasil['level'];  ?></td>
 				<td><?php echo $hasil['active'];  ?></td>
-				<td class='text-center' > <a href='mu.php?aksi=edit&n= <?php echo $hasil['nim'] ;?> ' class='btn-sm btn-warning fas fa-edit' > edit</a>
+				<td class='text-center' > <a href='mu?aksi=edit&n= <?php echo $hasil['nim'] ;?> ' class='btn-sm btn-warning fas fa-edit' > edit</a>
      
-           		<a href="mu.php?aksi=delete&n=<?php echo $hasil['nim'] ;?>" class="btn-sm btn-danger fas fa-trash-alt mt-2" onclick="javascript:return confirm('Anda Yakin menghapus data ini?')" > hapus </a> 
+           		<a href="mu?aksi=delete&n=<?php echo $hasil['nim'] ;?>" class="btn-sm btn-danger fas fa-trash-alt mt-2" onclick="javascript:return confirm('Anda Yakin menghapus data ini?')" > hapus </a> 
 				</td>
 			</tr>
 		
@@ -82,9 +82,9 @@ function view($conn){ ?>
 function edit($conn){  ?>
 	<div>
 	<ul class="breadcrumb">
-		<li class="breadcrumb-item"><a href="index.php"><i class="fas fa-home"></i></a></li>
+		<li class="breadcrumb-item"><a href="index"><i class="fas fa-home"></i></a></li>
 		<li class="breadcrumb-item"><a href="#">Master Data</a></li>
-		<li class="breadcrumb-item"><a href="mu.php?aksi=view">Manajemen Akun Pengguna</a></li>
+		<li class="breadcrumb-item"><a href="mu?aksi=view">Manajemen Akun Pengguna</a></li>
 		<li class="breadcrumb-item"><a href="#">Update Akun Pengguna</a></li>
 	</ul>
 	</div>
@@ -131,7 +131,7 @@ $hasil=mysqli_fetch_array($sql);
          <br>
          <div class='text-center'>
          <input class="btn btn-success btn-submit" type="submit" name="ubah" value="Ubah">
-         <a href="mu.php" ><input class="btn btn-success btn-danger" type="button" value="Batal"></a>
+         <a href="mu" ><input class="btn btn-success btn-danger" type="button" value="Batal"></a>
          </div>
       </form>
   </div>
@@ -165,7 +165,7 @@ if (isset($_POST['ubah']))
 
       if($sql2){ // Cek jika proses simpan ke database sukses atau tidak
          // Jika Sukses, Lakukan :   
-       echo "<script> alert ('User Account dan password berhasil diubah');window.location='mu.php';</script>"; 
+       echo "<script> alert ('User Account dan password berhasil diubah');window.location='mu';</script>"; 
       }
 else {
      echo "gagal";
@@ -173,7 +173,7 @@ else {
    }
     if($sql){ // Cek jika proses simpan ke database sukses atau tidak
                 // Jika Sukses, Lakukan :   
-              echo "<script> alert ('User Account berhasil diubah');window.location='mu.php';</script>"; 
+              echo "<script> alert ('User Account berhasil diubah');window.location='mu';</script>"; 
              }
       else {
             echo "gagal";

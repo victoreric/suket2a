@@ -4,7 +4,7 @@ include '../assets/indohari.php';
 
 session_start();
 if(!isset($_SESSION['nama'])){
-   echo "<script> alert('Anda Belum Login'); window.location='../index.php'; </script>";
+   echo "<script> alert('Anda Belum Login'); window.location='../index'; </script>";
 } 
 
 $level=$_SESSION['level'];
@@ -67,7 +67,7 @@ if($level=='2'){
             <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
 
                 <!-- Sidebar - Brand -->
-                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
+                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index">
                     <div class="sidebar-brand-icon">
                         <!-- <i class="fas fa-laugh-wink"></i> -->
                         <img src="../assets/img/unpattilogo.png" width="50px" alt="">
@@ -80,7 +80,7 @@ if($level=='2'){
 
                 <!-- Nav Item - Dashboard -->
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.php">
+                    <a class="nav-link" href="index">
                         <i class="fas fa-fw fa-tachometer-alt"></i>
                         <span>Dashboard</span></a>
                 </li>
@@ -103,9 +103,9 @@ if($level=='2'){
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Surat Keterangan:</h6>
-                            <a class="collapse-item" href="ak.php"> Aktif Kuliah</a>
-                            <a class="collapse-item" href="ktm.php">KTM Sementara</a>
-                            <a class="collapse-item" href="rb.php">Rekomendasi Beasiswa</a>
+                            <a class="collapse-item" href="ak"> Aktif Kuliah</a>
+                            <a class="collapse-item" href="ktm">KTM Sementara</a>
+                            <a class="collapse-item" href="rb">Rekomendasi Beasiswa</a>
                             <!-- <a class="collapse-item" href="#">Lainnya</a> -->
                         </div>
                     </div>
@@ -121,7 +121,7 @@ if($level=='2'){
 
                 <!-- Nav Item - pribadi Collapse Menu -->
                 <li class="nav-item">
-                    <a class="nav-link collapsed" href="cs.php" 
+                    <a class="nav-link collapsed" href="cs" 
                         aria-expanded="true" aria-controls="collapseUtilities">
                         <i class="fas fa-fw fa-folder"></i>
                         <span>Cek Status</span>
@@ -200,7 +200,7 @@ if($level=='2'){
                                         <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                         Profile
                                     </a> -->
-                                    <a class="dropdown-item" href="cp.php">
+                                    <a class="dropdown-item" href="">
                                         <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                                         Ganti Password
                                     </a>
@@ -223,7 +223,7 @@ if($level=='2'){
     <!-- end  Topbar Navbar-->
 <?php } 
 else {
-    echo "<script> alert('Anda Tidak punya akses ke Halaman ini.'); window.location='../index.php'; </script>";
+    echo "<script> alert('Anda Tidak punya akses ke Halaman ini.'); window.location='../index'; </script>";
     exit;
 }
 ?>

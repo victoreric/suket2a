@@ -5,9 +5,9 @@ $id=$_GET['id'];
 
 <div>
 <ul class="breadcrumb">
-    <li class="breadcrumb-item"><a href="index.php"><i class="fas fa-home"></i></a></li>
+    <li class="breadcrumb-item"><a href="index"><i class="fas fa-home"></i></a></li>
     <li class="breadcrumb-item"><a href="#">Lihat Data</a></li>
-    <li class="breadcrumb-item"><a href="spak.php">Surat Permohonan</a></li>
+    <li class="breadcrumb-item"><a href="spak">Surat Permohonan</a></li>
     <li class="breadcrumb-item"><a href="#">Detail Permohonan</a></li>
   </ul>
 </div>
@@ -92,23 +92,23 @@ $id=$_GET['id'];
          </tr>
          <tr>
              <td>Fotocopy UKT</td>
-             <td><a href="luk.php?f=<?php echo $hasil['ukt']; ?>" target='blank'><?php echo $hasil['ukt']?> </td>
+             <td><a href="luk?f=<?php echo $hasil['ukt']; ?>" target='blank'><?php echo $hasil['ukt']?> </td>
          </tr>
          <tr>
              <td>Fotocopy KRS</td>
-             <td><a href="luk.php?f=<?php echo $hasil['krs']; ?>" target='blank'><?php echo $hasil['krs']?> </td>
+             <td><a href="luk?f=<?php echo $hasil['krs']; ?>" target='blank'><?php echo $hasil['krs']?> </td>
          </tr>
          <tr>
              <td>Fotocopy DNS</td>
-             <td><a href="luk.php?f=<?php echo $hasil['dns']; ?>" target='blank'><?php echo $hasil['dns']?> </td>
+             <td><a href="luk?f=<?php echo $hasil['dns']; ?>" target='blank'><?php echo $hasil['dns']?> </td>
          </tr>
          <tr>
              <td>Fotocopy Kartu Keluarga</td>
-             <td><a href="luk.php?f=<?php echo $hasil['kk']; ?>" target='blank'><?php echo $hasil['kk']?> </td>
+             <td><a href="luk?f=<?php echo $hasil['kk']; ?>" target='blank'><?php echo $hasil['kk']?> </td>
          </tr>
          <tr>
              <td>Fotocopy Pangkat Orang Tua</td>
-             <td><a href="luk.php?f=<?php echo $hasil['skortu']; ?>" target='blank'><?php echo $hasil['skortu']?> </td>
+             <td><a href="luk?f=<?php echo $hasil['skortu']; ?>" target='blank'><?php echo $hasil['skortu']?> </td>
          </tr>
      </table>
      <div class='p-2 bg-warning'>   
@@ -132,7 +132,7 @@ $id=$_GET['id'];
         </div>
         <div class="form-check-inline">
             <button type="submit" name='simpan' class="btn btn-success ml-5 mr-5 mt-3">Simpan</button>  
-            <a href="spak.php" class="btn btn-danger mt-3">Batal</a> 
+            <a href="spak" class="btn btn-danger mt-3">Batal</a> 
         </div>
     </div> 
         <?php } 
@@ -142,16 +142,16 @@ $id=$_GET['id'];
                 </div>                
                 <div class="panel-footer mt-2 text-center">
                     <?php if($hasil['id_jenis']=='1'){ 
-                        echo "<a href='c.php?id=$id' class='btn btn-success mr-3' name='' target='blank'>Cetak Surat Keterangan</a> ";
+                        echo "<a href='c?id=$id' class='btn btn-success mr-3' name='' target='blank'>Cetak Surat Keterangan</a> ";
                     }  
                     elseif($hasil['id_jenis']=='2'){
-                        echo "<a href='c2.php?id=$id' class='btn btn-success mr-3' name='' target='blank'>Cetak Surat Keterangan</a> ";
+                        echo "<a href='c2?id=$id' class='btn btn-success mr-3' name='' target='blank'>Cetak Surat Keterangan</a> ";
                     }
                     else{
-                        echo "<a href='c3.php?id=$id' class='btn btn-success mr-3' name='' target='blank'>Cetak Surat Keterangan</a> ";
+                        echo "<a href='c3?id=$id' class='btn btn-success mr-3' name='' target='blank'>Cetak Surat Keterangan</a> ";
                     }
                     ?>
-                    <a href="spak.php" class="mt-1 btn btn-danger">Kembali</a>
+                    <a href="spak" class="mt-1 btn btn-danger">Kembali</a>
                 </div>
             <?php }}?> 
     </form>
@@ -167,9 +167,9 @@ $id=$_GET['id'];
         $sql=mysqli_query($conn,$queri);
 
         if($sql){
-            echo "<script> alert ('Berhasil menambahkan Nomor surat,  Tanda tangan dan Cap pada Surat Keterangan');window.location='spak_d.php?id=$id';</script>"; 
+            echo "<script> alert ('Berhasil menambahkan Nomor surat,  Tanda tangan dan Cap pada Surat Keterangan');window.location='spak_d?id=$id';</script>"; 
         }else{
-            echo "<script> alert ('Ada Kesalahan saat proses penyimpanan');window.location='spak.php';</script>";
+            echo "<script> alert ('Ada Kesalahan saat proses penyimpanan');window.location='spak';</script>";
         }
     }
     ?>   
