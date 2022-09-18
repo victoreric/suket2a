@@ -158,7 +158,7 @@
                         <div class="form-group">
                             <label for="srtpangkat" class="form-control-label">Fotocopy Pangkat/Jabatan Orang Tua:</label>
                             <input type="file" class="form-control" id="srtpangkat" accept=".pdf" placeholder="" name="srtpangkat">
-                            <span>Jika tidak ada, Anda diwajibkan mengupload file kosong.</span>
+                            <span>Abaikan mengupload file ini, jika tidak diperlukan.</span>
                         </div>
                     </div>
                 </div>
