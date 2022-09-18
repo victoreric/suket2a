@@ -32,7 +32,8 @@ $nim=$_SESSION['nim'];
       $query="SELECT surat.*, jenis_suket.*
        FROM surat
        INNER JOIN jenis_suket ON jenis_suket.id_jenis=surat.jenis 
-       WHERE nim=$nim";
+       WHERE nim=$nim
+       ORDER BY id_surat DESC";
 
       $sql=mysqli_query($conn,$query);
       $cek=mysqli_num_rows($sql);

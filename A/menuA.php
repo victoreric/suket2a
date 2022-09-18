@@ -32,6 +32,9 @@ if($level=='1'){
         <script src="https://code.highcharts.com/highcharts.js"></script>
         <script src="../vendor/jquery/jquery.min.js"></script>
 
+        <!-- datePicker -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
         <!-- scriptJamDigital -->
         <script type="text/javascript">
             // 1 detik = 1000
@@ -159,13 +162,9 @@ if($level=='1'){
                             echo '<br>';
                             $tgl=date('Y-m-d');
                             echo tanggal_indo($tgl);
-                            echo '<br> <br>';
+                            echo '<br>';
+                            echo "<div id='tanggalku'></div>";
                         ?>
-                            <table align=center style="border:1px solid black" bgcolor="blue" cellpadding="7">
-                                <tr>
-                                    <td><div id="tanggalku"></div> </td>
-                                </tr>
-                            </table>
                         </span>
                     </span>
                 </li>

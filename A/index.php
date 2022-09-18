@@ -1,5 +1,6 @@
 <?php
 include 'menuA.php';
+include '../link.php';
 ?>
 
 <!-- Main content starts -->
@@ -26,15 +27,20 @@ include 'menuA.php';
     <!-- Statistik  -->
 <div class="row">
     <div class="col-xl-3 col-md-6 mb-3">
-        <div class="card border-left-success shadow h-100 py-2">
+        <div class="card border-left-secondary shadow h-100 py-2">
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                            Total Surat Permohonan</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">10
+                            Total Permohonan</div>
+                        <?php
+                        $query="SELECT * From surat";
+                        $sql=mysqli_query($conn,$query);
+                        $total=mysqli_num_rows($sql);
+                        ?>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $total; ?>
                         <small>Surat</small>
-                        <p class="text-xs bg-success text-white">Sudah diproses</p>
+                        <p class="text-xs bg-secondary text-white"></p>
                     </div>
                     </div>
                     <div class="col-auto">
@@ -51,8 +57,219 @@ include 'menuA.php';
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                            Surat Aktif Kuliah</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">2
+                            Total Surat Aktif Kuliah</div>
+                        <?php
+                        $query="SELECT * From surat WHERE jenis='1'";
+                        $sql=mysqli_query($conn,$query);
+                        $total=mysqli_num_rows($sql);
+                        ?>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $total; ?>
+                        <small>Surat</small>
+                        <p class="text-xs bg-danger text-white"></p>
+                    </div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fa fa-envelope-open fa-2x text-gray-30"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-3 col-md-6 mb-3">
+        <div class="card border-left-warning shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                            Total Surat KTM Sementara</div>
+                            <?php
+                        $query="SELECT * From surat WHERE jenis='2'";
+                        $sql=mysqli_query($conn,$query);
+                        $total=mysqli_num_rows($sql);
+                        ?>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $total; ?>
+                        <small>Surat</small>
+                        <p class="text-xs bg-danger text-white"></p>
+                    </div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fa fa-envelope-o fa-2x text-gray-30"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-3 col-md-6 mb-3">
+        <div class="card border-left-info shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                            Total Surat Rekomendasi</div>
+                        <?php 
+                            $query="SELECT * From surat WHERE jenis='3'";
+                        $sql=mysqli_query($conn,$query);
+                        $total=mysqli_num_rows($sql);
+                        ?>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $total; ?>
+                        <small>Surat</small>
+                        <p class="text-xs bg-danger text-white"></p>
+                    </div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fa fa-envelope fa-2x text-gray-30"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-xl-3 col-md-6 mb-3">
+        <div class="card border-left-success shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                            Total Permohonan yang telah diproses</div>
+                        <?php
+                        $query="SELECT * From surat WHERE ttd='ttd.png'";
+                        $sql=mysqli_query($conn,$query);
+                        $total=mysqli_num_rows($sql);
+                        ?>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $total; ?>
+                        <small>Surat</small>
+                        <p class="text-xs bg-success text-white"></p>
+                    </div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fa fa-envelope-open-o fa-2x text-gray-30"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-3 col-md-6 mb-3">
+        <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                            Total Surat Aktif Kuliah</div>
+                        <?php
+                        $query="SELECT * From surat WHERE ttd='ttd.png' && jenis='1' ";
+                        $sql=mysqli_query($conn,$query);
+                        $total=mysqli_num_rows($sql);
+                        ?>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $total; ?>
+                        <small>Surat</small>
+                        <p class="text-xs bg-success text-white">Telah diproses</p>
+                    </div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fa fa-envelope-open fa-2x text-gray-30"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-3 col-md-6 mb-3">
+        <div class="card border-left-warning shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                            Total Surat KTM Sementara</div>
+                            <?php
+                        $query="SELECT * From surat WHERE ttd='ttd.png' && jenis='2'";
+                        $sql=mysqli_query($conn,$query);
+                        $total=mysqli_num_rows($sql);
+                        ?>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $total; ?>
+                        <small>Surat</small>
+                        <p class="text-xs bg-success text-white">Telah diproses</p>
+                    </div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fa fa-envelope-o fa-2x text-gray-30"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-3 col-md-6 mb-3">
+        <div class="card border-left-info shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                            Total Surat Rekomendasi</div>
+                        <?php 
+                            $query="SELECT * From surat WHERE  ttd='ttd.png' && jenis='3'";
+                        $sql=mysqli_query($conn,$query);
+                        $total=mysqli_num_rows($sql);
+                        ?>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $total; ?>
+                        <small>Surat</small>
+                        <p class="text-xs bg-success text-white">Telah diproses</p>
+                    </div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fa fa-envelope fa-2x text-gray-30"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-xl-3 col-md-6 mb-3">
+        <div class="card border-left-danger shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                            Total Permohonan yang belum diproses</div>
+                        <?php
+                        $query="SELECT * From surat WHERE ttd=''";
+                        $sql=mysqli_query($conn,$query);
+                        $total=mysqli_num_rows($sql);
+                        ?>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $total; ?>
+                        <small>Surat</small>
+                        <p class="text-xs bg-danger text-white"></p>
+                    </div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fa fa-envelope-open-o fa-2x text-gray-30"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-3 col-md-6 mb-3">
+        <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                            Total Surat Aktif Kuliah</div>
+                        <?php
+                        $query="SELECT * From surat WHERE ttd='' && jenis='1' ";
+                        $sql=mysqli_query($conn,$query);
+                        $total=mysqli_num_rows($sql);
+                        ?>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $total; ?>
                         <small>Surat</small>
                         <p class="text-xs bg-danger text-white">Belum diproses</p>
                     </div>
@@ -71,8 +288,13 @@ include 'menuA.php';
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                            Surat KTM Sementara</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">2
+                            Total Surat KTM Sementara</div>
+                            <?php
+                        $query="SELECT * From surat WHERE ttd='' && jenis='2'";
+                        $sql=mysqli_query($conn,$query);
+                        $total=mysqli_num_rows($sql);
+                        ?>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $total; ?>
                         <small>Surat</small>
                         <p class="text-xs bg-danger text-white">Belum diproses</p>
                     </div>
@@ -91,8 +313,13 @@ include 'menuA.php';
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                            Surat Rekomendasi</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">1
+                            Total Surat Rekomendasi</div>
+                        <?php 
+                            $query="SELECT * From surat WHERE  ttd='' && jenis='3'";
+                        $sql=mysqli_query($conn,$query);
+                        $total=mysqli_num_rows($sql);
+                        ?>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $total; ?>
                         <small>Surat</small>
                         <p class="text-xs bg-danger text-white">Belum diproses</p>
                     </div>
@@ -107,6 +334,7 @@ include 'menuA.php';
 
 </div>
 <!-- endStatistik  -->
+
 
 <!-- endContainerFluid -->
 </div>

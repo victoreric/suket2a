@@ -158,6 +158,7 @@
                         <div class="form-group">
                             <label for="srtpangkat" class="form-control-label">Fotocopy Pangkat/Jabatan Orang Tua:</label>
                             <input type="file" class="form-control" id="srtpangkat" accept=".pdf" placeholder="" name="srtpangkat">
+                            <span>Jika tidak ada, Anda diwajibkan mengupload file kosong.</span>
                         </div>
                     </div>
                 </div>
@@ -278,13 +279,13 @@ if(isset($_POST['simpan'])){
     $unik=$_SESSION['nim'];
     $srtpangkatfile = $unik.$srtpangkat ;
     $path4 = "../assets/bekas_ak/".$srtpangkatfile;
-    
+    move_uploaded_file($tmp4, $path4);
 
     if(move_uploaded_file($tmp, $path))
     if(move_uploaded_file($tmp1, $path1))  
     if(move_uploaded_file($tmp2, $path2)) 
     if(move_uploaded_file($tmp3, $path3))
-    if(move_uploaded_file($tmp4, $path4))
+    // if(move_uploaded_file($tmp4, $path4))
     {
         $query="INSERT INTO surat (nim, nama, prodi, semester, thnakd,ortu, pekerjaan, nip, pangkat, jenis, tujuan, ukt, krs, dns, kk, skortu,ttd,cap) VALUES ('$nim','$nama','$prodi','$semester','$thnakd','$ortu','$pekerjaan','$nip','$pangkat','$jenis','$tujuan','$uktfile','$krsfile','$dnsfile','$kkfile','$srtpangkatfile','','')";
       
