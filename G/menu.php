@@ -8,7 +8,7 @@ if(!isset($_SESSION['nama'])){
 } 
 
 $level=$_SESSION['level'];
-if($level=='2'){
+if($level=='101'){
 ?>
 <!-- MenuForGuest -->
 <!DOCTYPE html>

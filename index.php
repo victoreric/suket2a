@@ -21,10 +21,10 @@
 <?php
     session_start();
     if(isset($_SESSION['nama'])){
-    if($_SESSION['level']=='1' && $_SESSION['active']=='Y'){
+    if($_SESSION['level']=='100' && $_SESSION['active']=='Y'){
         header('location:A');
     }
-    else if($_SESSION['level']=='2' && $_SESSION['active']=='Y'){
+    else if($_SESSION['level']=='101' && $_SESSION['active']=='Y'){
         header('location:G');
     }
     else {
@@ -50,7 +50,7 @@
     <div class="col-lg-6">
         <div class="p-2">
             <div class="text-center">
-                <img src="assets/img/unp2.png" alt="logo" class="logo">
+                <img src="assets/img/unpattilogo.png" width="250" height="250" alt="logo" class="logo">
                  <h1 class="h4 text-gray-900 mb-4">Letter of Acknowledge</h1>
             </div>
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
@@ -136,10 +136,10 @@
 		$_SESSION['level']=$hasil['level'];
 		$_SESSION['active']=$hasil['active'];
 
-		if($_SESSION['level']=='1' && $_SESSION['active']=='Y'){
+		if($_SESSION['level']=='100' && $_SESSION['active']=='Y'){
             header('location:A/index');
 		}
-		else if($_SESSION['level']=='2' && $_SESSION['active']=='Y'){
+		else if($_SESSION['level']=='101' && $_SESSION['active']=='Y'){
 		    header('location:G/index');
 		}
 		else {
