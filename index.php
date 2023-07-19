@@ -20,11 +20,11 @@
 <!-- login Form -->
 <?php
     session_start();
-    if(isset($_SESSION['nama'])){
-    if($_SESSION['level']=='100' && $_SESSION['active']=='Y'){
+    if(isset($_SESSION['nama_suket'])){
+    if($_SESSION['level_suket']=='100' && $_SESSION['active_suket']=='Y'){
         header('location:A');
     }
-    else if($_SESSION['level']=='101' && $_SESSION['active']=='Y'){
+    else if($_SESSION['level_suket']=='101' && $_SESSION['active_suket']=='Y'){
         header('location:G');
     }
     else {
@@ -125,21 +125,21 @@
 
 	if ($cek==1 ) {
 		$hasil=mysqli_fetch_array($sql);
-        $_SESSION['nim']=$hasil['nim'];
-		$_SESSION['nama']=$hasil['nama'];
-        $_SESSION['jk']=$hasil['jk'];
-        $_SESSION['tmplahir']=$hasil['tmplahir'];
-        $_SESSION['tglahir']=$hasil['tglahir'];
-        $_SESSION['prodi']=$hasil['prodi'];
-        $_SESSION['hp']=$hasil['hp'];
-        $_SESSION['email']=$hasil['email'];
-		$_SESSION['level']=$hasil['level'];
-		$_SESSION['active']=$hasil['active'];
+        $_SESSION['nim_suket']=$hasil['nim'];
+		$_SESSION['nama_suket']=$hasil['nama'];
+        $_SESSION['jk_suket']=$hasil['jk'];
+        $_SESSION['tmplahir_suket']=$hasil['tmplahir'];
+        $_SESSION['tglahir_suket']=$hasil['tglahir'];
+        $_SESSION['prodi_suket']=$hasil['prodi'];
+        $_SESSION['hp_suket']=$hasil['hp'];
+        $_SESSION['email_suket']=$hasil['email'];
+		$_SESSION['level_suket']=$hasil['level'];
+		$_SESSION['active_suket']=$hasil['active'];
 
-		if($_SESSION['level']=='100' && $_SESSION['active']=='Y'){
+		if($_SESSION['level_suket']=='100' && $_SESSION['active_suket']=='Y'){
             header('location:A/index');
 		}
-		else if($_SESSION['level']=='101' && $_SESSION['active']=='Y'){
+		else if($_SESSION['level_suket']=='101' && $_SESSION['active_suket']=='Y'){
 		    header('location:G/index');
 		}
 		else {
@@ -148,6 +148,7 @@
 		}
 	}
 	else{
+        session_destroy();
  		echo "<script> alert ('User dan Pasword tidak terdaftar. Hubungi Sub Bagian Kemahasiswaan dan Alumni FATEK.'); window.location='index'; </script>" ;
 	}
 }
@@ -162,5 +163,6 @@
 </body>
 </html>
 <?php
-ob_flush()
+ob_flush();
+// session_destroy()
 ?>

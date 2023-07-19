@@ -109,8 +109,8 @@ $hasil=mysqli_fetch_array($sql);
        
          <label for='level'>Level</label>
          <select name="level" id="level" class="form-control">
-            <option value="1" <?php if($hasil['level']=='1'){echo 'selected';} ?>>Administrator</option>
-            <option value="2" <?php if($hasil['level']=='2'){echo 'selected';}  ?>>User</option>
+            <option value="100" <?php if($hasil['level']=='100'){echo 'selected';} ?>>Administrator</option>
+            <option value="101" <?php if($hasil['level']=='101'){echo 'selected';}  ?>>User</option>
          </select>
          
          <br>

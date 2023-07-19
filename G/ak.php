@@ -21,18 +21,18 @@
             <div class="panel-body">
                 <div class="form-group">
                     <label for="nim" class="form-control-label">NIM:</label>
-                    <input type="number" class="form-control" id="nim" name="nim" value='<?php echo $_SESSION['nim']; ?>' disabled>
+                    <input type="number" class="form-control" id="nim" name="nim" value='<?php echo $_SESSION['nim_suket']; ?>' disabled>
                 </div>
                 <div class="form-group">
                     <label for="nama" class="form-control-label">Nama Mahasiswa:</label>
-                    <input type="text" class="form-control" id="nama" value="<?php echo $_SESSION['nama']; ?>" name="nama" disabled>
+                    <input type="text" class="form-control" id="nama" value="<?php echo $_SESSION['nama_suket']; ?>" name="nama" disabled>
                 </div>
 
                 <div class="form-group">
                     <label for="prodi" class="form-control-label">Program Studi:</label>
                      <select name="prodi" id='prodi' class="form-control" disabled>
                         <?php      
-                            $var=$_SESSION['prodi'];
+                            $var=$_SESSION['prodi_suket'];
                             echo $var;
                             $queri="SELECT * FROM prodi WHERE id_prodi=$var";
                             $sql=mysqli_query($conn,$queri);
@@ -237,9 +237,9 @@ uploadField.onchange = function() {
 include '../link.php';
 
 if(isset($_POST['simpan'])){
-    $nim=$_SESSION['nim'];
-    $nama=$_SESSION['nama'];
-    $prodi=$_SESSION['prodi'];
+    $nim=$_SESSION['nim_suket'];
+    $nama=$_SESSION['nama_suket'];
+    $prodi=$_SESSION['prodi_suket'];
     $semester=$_POST['semester'];
     $thnakd=$_POST['thnakd'];
     $ortu=$_POST['ortu'];
@@ -252,19 +252,19 @@ if(isset($_POST['simpan'])){
     $ukt=$_FILES['ukt']['name'];
     $tmp = $_FILES['ukt']['tmp_name'];
     // $nipfoto=substr($nip,0,10);
-    $unik=$_SESSION['nim'];
+    $unik=$_SESSION['nim_suket'];
     $uktfile = $unik.$ukt ;
     $path = "../assets/bekas_ak/".$uktfile;
 
     $krs=$_FILES['krs']['name'];
     $tmp1 = $_FILES['krs']['tmp_name'];
-    $unik=$_SESSION['nim'];
+    $unik=$_SESSION['nim_suket'];
     $krsfile = $unik.$krs ;
     $path1 = "../assets/bekas_ak/".$krsfile;
 
     $dns=$_FILES['dns']['name'];
     $tmp2 = $_FILES['dns']['tmp_name'];
-    $unik=$_SESSION['nim'];
+    $unik=$_SESSION['nim_suket'];
     $dnsfile = $unik.$dns ;
     $path2 = "../assets/bekas_ak/".$dnsfile;
 
@@ -276,7 +276,7 @@ if(isset($_POST['simpan'])){
 
     $srtpangkat=$_FILES['srtpangkat']['name'];
     $tmp4 = $_FILES['srtpangkat']['tmp_name'];
-    $unik=$_SESSION['nim'];
+    $unik=$_SESSION['nim_suket'];
     $srtpangkatfile = $unik.$srtpangkat ;
     $path4 = "../assets/bekas_ak/".$srtpangkatfile;
     move_uploaded_file($tmp4, $path4);

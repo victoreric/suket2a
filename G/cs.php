@@ -2,7 +2,7 @@
 // cek status
 include 'menu.php'; 
 include '../link.php';
-$nim=$_SESSION['nim'];
+$nim=$_SESSION['nim_suket'];
 ?>
 
 <div>
